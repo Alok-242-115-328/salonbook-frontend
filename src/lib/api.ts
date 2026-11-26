@@ -1,4 +1,4 @@
-const BASE_URL = process.env.NEXT_PUBLIC_SERVER_URL || "http://localhost:5000";
+const BASE_URL = process.env.NEXT_PUBLIC_SERVER_URL;
 
 type ApiOptions = {
   method?: "GET" | "POST" | "PATCH" | "DELETE";
