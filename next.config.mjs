@@ -9,13 +9,6 @@ const nextConfig = {
       { protocol: "https", hostname: "images.pexels.com" },
     ],
   },
-};
-
-export default nextConfig;
-
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  // ... আপনার অন্যান্য কনফিগ
   async rewrites() {
     return [
       {
