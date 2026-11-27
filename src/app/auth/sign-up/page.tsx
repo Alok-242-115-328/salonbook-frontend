@@ -69,6 +69,9 @@ export default function SignUpPage() {
   const google = async () => {
     setLoading(true);
     setError("");
+
+    // 👇 এই লাইনটি যোগ করুন 👇
+      //const origin = typeof window !== "undefined" ? window.location.origin : "";
     try {
       //const result = await signIn.social({ provider: "google", callbackURL: "/dashboard" });
       const result = await signIn.social({ provider: "google", 
