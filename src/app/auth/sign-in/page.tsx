@@ -50,7 +50,8 @@ export default function SignInPage() {
       //const result = await signIn.social({ provider: "google", callbackURL: "/dashboard" });
       const result = await signIn.social({
          provider: "google", 
-         callbackURL: `${origin}/dashboard`  });// 👈 এখানে পরিবর্তন করুন
+        // callbackURL: `${origin}/dashboard`  });// 👈 এখানে পরিবর্তন করুন
+         callbackURL: "https://salonbook-eight.vercel.app/dashboard/customer", }); // 👈 সম্পূর্ণ URL
 
 
       if (result.error) throw new Error(result.error.message || "Google sign in failed.");

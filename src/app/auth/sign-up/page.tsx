@@ -76,7 +76,7 @@ export default function SignUpPage() {
       //const result = await signIn.social({ provider: "google", callbackURL: "/dashboard" });
       const result = await signIn.social({ provider: "google", 
         
-        callbackURL: `${origin}/dashboard` });// 👈 এখানে পরিবর্তন করুন
+         callbackURL: "https://salonbook-eight.vercel.app/dashboard/customer", });// 👈 এখানে পরিবর্তন করুন
 
       if (result.error) throw new Error(result.error.message || "Google registration failed.");
       const url = (result.data as { url?: string } | null)?.url;
