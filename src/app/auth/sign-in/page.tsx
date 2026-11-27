@@ -48,7 +48,11 @@ export default function SignInPage() {
     setError("");
     try {
       //const result = await signIn.social({ provider: "google", callbackURL: "/dashboard" });
-      const result = await signIn.social({ provider: "google", callbackURL: "http://localhost:3000/dashboard" });
+      const result = await signIn.social({
+         provider: "google", 
+         callbackURL: `${origin}/dashboard`  });// 👈 এখানে পরিবর্তন করুন
+
+
       if (result.error) throw new Error(result.error.message || "Google sign in failed.");
       const url = (result.data as { url?: string } | null)?.url;
       if (url) window.location.href = url;
