@@ -12,3 +12,18 @@ const nextConfig = {
 };
 
 export default nextConfig;
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // ... আপনার অন্যান্য কনফিগ
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'https://salonbook-backend-nuic.onrender.com/api/:path*', // Proxy to Backend
+      },
+    ];
+  },
+};
+
+export default nextConfig;
